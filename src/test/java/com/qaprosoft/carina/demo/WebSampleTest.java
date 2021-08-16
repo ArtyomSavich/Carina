@@ -49,6 +49,8 @@ public class WebSampleTest implements IAbstractTest {
     @TestPriority(Priority.P3)
     @TestLabel(name = "feature", value = {"web", "regression"})
     public void testModelSpecs() {
+
+
         // Open GSM Arena home page and verify page is opened
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -117,5 +119,6 @@ public class WebSampleTest implements IAbstractTest {
         }
         softAssert.assertAll();
     }
+
 
 }
