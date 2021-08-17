@@ -27,10 +27,16 @@ public class GoodsItem extends AbstractUIObject {
     public GoodsItem(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
+    public GoodsItem(WebDriver driver) {
+        super(driver);
+    }
 
     public CartPage getCartBtn() {
         cartBtn.click();
         return new CartPage(driver);
+    }
+    public ExtendedWebElement getCartBtnClone() {
+        return cartBtn;
     }
 
     public String readTitle() {

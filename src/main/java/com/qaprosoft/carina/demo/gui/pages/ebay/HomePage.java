@@ -28,8 +28,6 @@ public class HomePage extends AbstractPage {
         return helloButton;
     }
 
-
-
     @FindBy(xpath = "//li[@class='gh-t gh-divider-l']//a[contains(text(),'Daily Deals')]")
     private ExtendedWebElement openDailyDeals;
 

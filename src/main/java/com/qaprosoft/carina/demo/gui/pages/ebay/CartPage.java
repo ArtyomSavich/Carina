@@ -9,7 +9,12 @@ import org.openqa.selenium.support.FindBy;
 public class CartPage extends AbstractPage {
 
 
+    @FindBy(xpath = "//h1[@class= 'main-title']")
+    private ExtendedWebElement textCart;
 
+    public String getTextCart() {
+        return textCart.getText();
+    }
 
     @FindBy(xpath = "")
     private ExtendedWebElement removeButton;
