@@ -115,7 +115,6 @@ public class WebTest implements IAbstractTest {
 
     @Test
     public void testAddToCart() {
-        testLogin();
         HomePage home = new HomePage(getDriver());
         home.open();
         Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
