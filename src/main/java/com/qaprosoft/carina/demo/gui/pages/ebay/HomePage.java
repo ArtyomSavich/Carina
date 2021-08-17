@@ -12,8 +12,6 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//span[@class='gh-ug-guest']")
     private ExtendedWebElement signInButton;
 
-    //button[@class='gh-ua gh-control']/parent::li//div//li[5]
-
     @FindBy(xpath = "//a[contains(text(),'Sign out')]")
     private ExtendedWebElement signOutButton;
 
@@ -22,13 +20,18 @@ public class HomePage extends AbstractPage {
 
     @FindBy(xpath = "//span[@id='gh-ug']")
     private ExtendedWebElement helloText2;
-    //span[@id='gh-ug']
+
     @FindBy(xpath = "//button[@class='gh-ua gh-control']")
     private ExtendedWebElement helloButton;
 
     public ExtendedWebElement getHelloButton() {
         return helloButton;
     }
+
+
+
+    @FindBy(xpath = "//li[@class='gh-t gh-divider-l']//a[contains(text(),'Daily Deals')]")
+    private ExtendedWebElement openDailyDeals;
 
     @FindBy(xpath = "//li[@id = 'gh-eb-Geo']//a[@role = 'button']")
     private ExtendedWebElement changeLanguageButton;
@@ -64,5 +67,9 @@ public class HomePage extends AbstractPage {
     }
     public ExtendedWebElement getChangeLanguageRus() {
         return changeLanguageRus;
+    }
+    public DealsPage getOpenDailyDeals() {
+        openDailyDeals.click();
+        return new DealsPage(driver);
     }
 }

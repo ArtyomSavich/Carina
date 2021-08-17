@@ -7,6 +7,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class PageHeaderMenu extends AbstractUIObject {
 
+    @FindBy(xpath = "//div[@class='top-section']//h1")
+    private ExtendedWebElement cartCount;
+
+    public int getCartCount() {
+        return Integer.parseInt(cartCount.getText());
+    }
+
     public PageHeaderMenu(WebDriver driver) {
         super(driver);
     }

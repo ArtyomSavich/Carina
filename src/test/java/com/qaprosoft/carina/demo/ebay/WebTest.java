@@ -1,5 +1,6 @@
 package com.qaprosoft.carina.demo.ebay;
 
+import com.qaprosoft.carina.demo.gui.pages.NewsPage;
 import com.qaprosoft.carina.demo.gui.pages.ebay.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.collections.CollectionUtils;
@@ -24,12 +25,9 @@ public class WebTest implements IAbstractTest {
 
         HomePage home = new HomePage(getDriver());
         home.open();
-
         Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
 
-
         home.getSignInButton().click();
-
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.getEmailOrUserField().type("artyom_savich@mail.ru");
         loginPage.getContinueButton().click();
@@ -119,14 +117,32 @@ public class WebTest implements IAbstractTest {
        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
        home.getChangeLanguageButton().hover();
        home.getChangeLanguageEn().click();
-       home.getSignInButton().click();
        SearchPage searchPage = new SearchPage(getDriver());
        final String searchQ = "iphone";
-       List<GoodsItem> goods = searchPage.searchGoods(searchQ);
+       List<GoodsItem> goods = searchPage.searchGoodsWithSort(searchQ);
        Assert.assertFalse(CollectionUtils.isEmpty(goods), "No goods found");
-       for(GoodsItem ni: goods){
-           Assert.assertTrue(StringUtils.containsIgnoreCase(ni.readTitle(),searchQ), "Found invalid goods");
-       }
-
+       int randomNum = (int) (Math.random() * goods.size());
+       GoodsItem item = searchPage.getGoods().get(randomNum);
+       System.out.println(item);
+       item.getTitleLink().click();
+     //  searchPage.getSelectColorBtn();
+     //  searchPage.getSelectStorageBtn();
+       CartPage cartPage = item.getCartBtn();
+       Assert.assertTrue(cartPage.isPageOpened(), "Cart page is not opened!");
+       PageHeaderMenu cartCountMenu = new PageHeaderMenu(getDriver());
+       int count = cartCountMenu.getCartCount();
+       Assert.assertTrue(cartCountMenu.getCartCount() > count,
+       "Product not added to cart page!");
    }
+
+    @Test
+    public void testDealsPage(){
+        HomePage home = new HomePage(getDriver());
+        home.open();
+        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
+        home.getChangeLanguageButton().hover();
+        home.getChangeLanguageEn().click();
+        DealsPage dealsPage = home.getOpenDailyDeals();
+        Assert.assertTrue(dealsPage.isPageOpened(), "Home page is not opened!");
+    }
 }

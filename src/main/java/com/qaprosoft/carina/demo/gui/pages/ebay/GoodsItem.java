@@ -10,6 +10,9 @@ import java.util.List;
 
 public class GoodsItem extends AbstractUIObject {
 
+    public ExtendedWebElement getTitleLink() {
+        return titleLink;
+    }
 
     @FindBy(xpath=".//h3[@class='s-item__title']")
     public ExtendedWebElement titleLink;
@@ -17,12 +20,18 @@ public class GoodsItem extends AbstractUIObject {
     @FindBy(xpath = ".//span[@class='s-item__price']")
     private ExtendedWebElement goodsPrice;
 
-    //*[@class='srp-carousel-list__item-link']//div[contains(text(), 'Over $300.00')
+
+    @FindBy(xpath = "//a[@id='isCartBtn_btn']")
+    private ExtendedWebElement cartBtn;
 
     public GoodsItem(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
+    public CartPage getCartBtn() {
+        cartBtn.click();
+        return new CartPage(driver);
+    }
 
     public String readTitle() {
         return titleLink.getElement().getText();
