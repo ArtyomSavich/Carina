@@ -10,41 +10,30 @@ import java.util.List;
 
 public class GoodsItem extends AbstractUIObject {
 
-    public void getTitleLink() {
-        this.titleLink.click();
-    }
-
-    @FindBy(xpath=".//h3[@class='s-item__title']")
+    @FindBy(xpath = ".//h3[@class='s-item__title']")
     public ExtendedWebElement titleLink;
-
     @FindBy(xpath = ".//span[@class='s-item__price']")
     private ExtendedWebElement goodsPrice;
-
-    public void addWatchListBtn() {
-        watchListBtn.click();
-    }
     @FindBy(xpath = "//a[@class='gh-eb-li-a gh-rvi-menu watchlist-menu']")
     private ExtendedWebElement openWatchListMenu;
-
-
-    public void openWatchListMenu(){
-        openWatchListMenu.click();
-    }
-
     @FindBy(xpath = "//div[@id='watchWrapperId']")
     private ExtendedWebElement watchListBtn;
-
     @FindBy(xpath = "//a[@id='isCartBtn_btn']")
     private ExtendedWebElement cartBtn;
 
     public GoodsItem(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
+
     public GoodsItem(WebDriver driver) {
         super(driver);
     }
 
-        public void cartBtn() {
+    public void getTitleLink() {
+        this.titleLink.click();
+    }
+
+    public void cartBtn() {
         this.cartBtn.click();
     }
 
@@ -58,4 +47,8 @@ public class GoodsItem extends AbstractUIObject {
         return Double.parseDouble(array[0]);
     }
 
+    public void addWatchListBtn() {
+        watchListBtn.click();
+        openWatchListMenu.click();
+    }
 }

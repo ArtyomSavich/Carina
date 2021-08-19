@@ -155,10 +155,7 @@ public class WebTest implements IAbstractTest {
 
         home.signInButton();
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.emailOrUserField().type("artyom_savich@mail.ru");
-        loginPage.continueButton().click();
-        loginPage.passField().type("ViPEr9zVf'7");
-        loginPage.signButton().click();
+        loginPage.authorization();
 
         Assert.assertEquals(home.getHelloText(), "Hi Artyom!", "User not authorised");
         SearchPage searchPage = new SearchPage(getDriver());
@@ -207,8 +204,7 @@ public class WebTest implements IAbstractTest {
         pause(5);
         GoodsItem goodsItem = new GoodsItem(getDriver());
         goodsItem.addWatchListBtn();
-        goodsItem.openWatchListMenu();
-        pause(3);
+               pause(3);
         PageHeaderMenu pageHeaderMenu = new PageHeaderMenu(getDriver());
         WatchListPage watchListPage = pageHeaderMenu.openWatchListLinkPage();
         List<GoodsItem> goodsListFromWatchList = watchListPage.getGoodsFromWatchList();

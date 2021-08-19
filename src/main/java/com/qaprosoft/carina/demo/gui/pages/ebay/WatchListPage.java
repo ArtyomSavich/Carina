@@ -12,19 +12,13 @@ public class WatchListPage extends AbstractPage {
     @FindBy(xpath = "//div[@class='m-item']")
     private List<GoodsItem> goodsFromWatchList;
 
-    public List<GoodsItem> getGoodsFromWatchList() {
-        return goodsFromWatchList;
-    }
-
-    @FindBy(xpath = "//*[@id='vi-atl-lnk]/a")
-    private ExtendedWebElement watchListBtn;
-
-    public void AddWatchListBtn(){
-        watchListBtn.click();
-    }
-
     public WatchListPage(WebDriver driver) {
         super(driver);
         setPageURL("/mye/myebay/watchlist");
     }
+
+    public List<GoodsItem> getGoodsFromWatchList() {
+        return goodsFromWatchList;
+    }
 }
+

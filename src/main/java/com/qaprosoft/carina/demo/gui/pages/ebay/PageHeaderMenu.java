@@ -10,9 +10,9 @@ public class PageHeaderMenu extends AbstractUIObject {
 
     @FindBy(xpath = "//div[@class='top-section']//h1")
     private ExtendedWebElement cartCount;
+    @FindBy(xpath = "//div[@class='gh-menu gh--link__divider']//div//div//div//div//a//span[contains(text(),'View all items you are watching')]")
+    private ExtendedWebElement watchListLink;
 
-
-    //div[@class='vi-atw-btm-lnk ']/a
     public PageHeaderMenu(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
@@ -20,12 +20,6 @@ public class PageHeaderMenu extends AbstractUIObject {
     public PageHeaderMenu(WebDriver driver) {
         super(driver);
     }
-
-
-
-
-@FindBy(xpath = "//div[@class='gh-menu gh--link__divider']//div//div//div//div//a//span[contains(text(),'View all items you are watching')]")
-private ExtendedWebElement watchListLink;
 
     public WatchListPage openWatchListLinkPage() {
         watchListLink.click();

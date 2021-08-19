@@ -12,29 +12,26 @@ public class CartPage extends AbstractPage {
 
     @FindBy(xpath = "//a[@href='https://cart.payments.ebay.com/sc/view']")
     private ExtendedWebElement textCart;
-
-    public int getTextCart() {
-        int total = 0;
-        try {
-            total = Integer.parseInt(textCart.getText().equals("") ? "0": textCart.getText());
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }return total;
-    }
     @FindBy(xpath = "//span[contains(text(),'Remove')]/ancestor::button")
     private ExtendedWebElement removeButton;
-
-    public void RemoveButton() {
-        removeButton.click();
-    }
-
-    //button[@class='faux-link']//span[contains(text(),'Remove')]
-
-
 
     public CartPage(WebDriver driver) {
         super(driver);
         setPageAbsoluteURL("https://cart.payments.ebay.com/");
+    }
+
+    public int getTextCart() {
+        int total = 0;
+        try {
+            total = Integer.parseInt(textCart.getText().equals("") ? "0" : textCart.getText());
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+        return total;
+    }
+
+    public void RemoveButton() {
+        removeButton.click();
     }
 
 
