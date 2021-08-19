@@ -10,8 +10,8 @@ import java.util.List;
 
 public class GoodsItem extends AbstractUIObject {
 
-    public ExtendedWebElement getTitleLink() {
-        return titleLink;
+    public void getTitleLink() {
+        this.titleLink.click();
     }
 
     @FindBy(xpath=".//h3[@class='s-item__title']")
@@ -20,6 +20,19 @@ public class GoodsItem extends AbstractUIObject {
     @FindBy(xpath = ".//span[@class='s-item__price']")
     private ExtendedWebElement goodsPrice;
 
+    public void addWatchListBtn() {
+        watchListBtn.click();
+    }
+    @FindBy(xpath = "//a[@class='gh-eb-li-a gh-rvi-menu watchlist-menu']")
+    private ExtendedWebElement openWatchListMenu;
+
+
+    public void openWatchListMenu(){
+        openWatchListMenu.click();
+    }
+
+    @FindBy(xpath = "//div[@id='watchWrapperId']")
+    private ExtendedWebElement watchListBtn;
 
     @FindBy(xpath = "//a[@id='isCartBtn_btn']")
     private ExtendedWebElement cartBtn;
@@ -31,12 +44,8 @@ public class GoodsItem extends AbstractUIObject {
         super(driver);
     }
 
-    public CartPage getCartBtn() {
-        cartBtn.click();
-        return new CartPage(driver);
-    }
-    public ExtendedWebElement getCartBtnClone() {
-        return cartBtn;
+        public void cartBtn() {
+        this.cartBtn.click();
     }
 
     public String readTitle() {

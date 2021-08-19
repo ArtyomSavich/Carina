@@ -21,6 +21,9 @@ public class SearchPage extends AbstractPage {
         return goods;
     }
 
+
+
+
     @FindBy(xpath = "//*[@class='s-item__wrapper clearfix']")
     private List<GoodsItem> goods;
 
@@ -68,6 +71,7 @@ public class SearchPage extends AbstractPage {
 
     public List<GoodsItem> searchGoodsWithSort (String q){
         searchGoodsField.type(q);
+        pause(3);
         searchButton.click();
         filterButton.click();
         priceFilterButton.click();

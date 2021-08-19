@@ -1,5 +1,6 @@
 package com.qaprosoft.carina.demo.gui.pages.ebay;
 
+import com.qaprosoft.carina.core.foundation.utils.R;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
@@ -19,10 +20,6 @@ public class LoginPage extends AbstractPage {
     @FindBy(xpath = "//button[@name='sgnBt']")
     private ExtendedWebElement signButton;
 
-    public ExtendedWebElement getContinueButton() {
-        return continueButton;
-    }
-
     @FindBy(xpath = "//a[contains(text(),'register')]")
     private ExtendedWebElement registerButton;
 
@@ -41,22 +38,23 @@ public class LoginPage extends AbstractPage {
     @FindBy(xpath = "//button[@name='EMAIL_REG_FORM_SUBMIT']")
     private ExtendedWebElement createAccountButton;
 
+    public ExtendedWebElement continueButton() {
+        return continueButton;
+    }
 
-     public LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    public ExtendedWebElement getPassField() {
+    public ExtendedWebElement passField() {
         return passField;
     }
 
-    public ExtendedWebElement getSignButton() {
+    public ExtendedWebElement signButton() {
         return signButton;
     }
 
-    public ExtendedWebElement getEmailOrUserField() {
-        return emailOrUserField;
-    }
+    public ExtendedWebElement emailOrUserField() {return emailOrUserField;}
 
     public ExtendedWebElement getRegisterButton() {
         return registerButton;
@@ -82,4 +80,10 @@ public class LoginPage extends AbstractPage {
         return createAccountButton;
     }
 
+    public void authorization (){
+       emailOrUserField().type(R.TESTDATA.get("login"));
+       continueButton().click();
+       passField().type(R.TESTDATA.get("password"));
+       signButton().click();
+    }
 }

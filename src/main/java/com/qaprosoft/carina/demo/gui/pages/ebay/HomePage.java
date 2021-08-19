@@ -24,10 +24,6 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//button[@class='gh-ua gh-control']")
     private ExtendedWebElement helloButton;
 
-    public ExtendedWebElement getHelloButton() {
-        return helloButton;
-    }
-
     @FindBy(xpath = "//li[@class='gh-t gh-divider-l']//a[contains(text(),'Daily Deals')]")
     private ExtendedWebElement openDailyDeals;
 
@@ -40,33 +36,31 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//li[@id = 'gh-eb-Geo']//div//a[@id='gh-eb-Geo-a-default']")
     private ExtendedWebElement changeLanguageRus;
 
-    public ExtendedWebElement getSignOutButton() {
-        return signOutButton;
+    public void signOutButton() {
+        this.signOutButton.click();
     }
-
+    public void helloButton() {
+        this.helloButton.click();
+    }
     public HomePage(WebDriver driver) {
         super(driver);
         setPageAbsoluteURL(R.CONFIG.get(Configuration.Parameter.URL.getKey()));
     }
-    public ExtendedWebElement getChangeLanguageButton() {
-        return changeLanguageButton;
+    public void changeLanguageButton() {
+        this.changeLanguageButton.hover();
     }
-    public ExtendedWebElement getSignInButton(){
-        return this.signInButton;
-    }
+    public void signInButton(){this.signInButton.click();}
     public String getHelloText2() {
         return helloText2.getText();
     }
     public String getHelloText() {
         return helloText.getText();
     }
-    public ExtendedWebElement getChangeLanguageEn() {
-        return changeLanguageEn;
-    }
-    public ExtendedWebElement getChangeLanguageRus() {
+    public void changeLanguageEn() {this.changeLanguageEn.click();}
+    public ExtendedWebElement changeLanguageRus() {
         return changeLanguageRus;
     }
-    public DealsPage getOpenDailyDeals() {
+    public DealsPage openDailyDealsPage() {
         openDailyDeals.click();
         return new DealsPage(driver);
     }
