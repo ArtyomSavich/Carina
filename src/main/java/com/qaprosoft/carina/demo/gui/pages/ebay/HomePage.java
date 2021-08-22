@@ -53,9 +53,15 @@ public class HomePage extends AbstractPage {
     public PageHeaderMenu headerMenu() {
         return headerMenu;
     }
-    public void changeLanguageButton() {
+    public void changeLanguageToEn() {
         this.changeLanguageButton.hover();
+        this.changeLanguageEn.click();
     }
+    public void changeLanguageToRus() {
+        this.changeLanguageButton.hover();
+        this.changeLanguageRus.click();
+    }
+
     public void signInButton(){this.signInButton.click();}
     public String getText() {
         return helloText2.getText();
@@ -63,10 +69,8 @@ public class HomePage extends AbstractPage {
     public String getHelloText() {
         return helloText.getText();
     }
-    public void changeLanguageEn() {this.changeLanguageEn.click();}
-    public ExtendedWebElement changeLanguageRus() {
-        return changeLanguageRus;
-    }
+
+
     public DealsPage openDailyDealsPage() {
         openDailyDeals.click();
         return new DealsPage(driver);

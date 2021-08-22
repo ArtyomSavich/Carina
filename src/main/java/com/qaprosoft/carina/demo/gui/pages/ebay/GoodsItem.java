@@ -51,5 +51,6 @@ public class GoodsItem extends AbstractUIObject {
     public void addWatchListBtn() {
         watchListBtn.click();
         openWatchListMenu.click();
+        pause(3);
     }
 }
