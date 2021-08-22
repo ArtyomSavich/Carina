@@ -13,7 +13,6 @@ public class SearchPage extends AbstractPage {
 
     @FindBy(xpath = "//input[@name='_nkw']")
     private ExtendedWebElement searchGoodsField;
-
     @FindBy(xpath = "//input[@value='Search']")
     private ExtendedWebElement searchButton;
     @FindBy(xpath = "//*[@class='s-item__wrapper clearfix']")
@@ -70,7 +69,7 @@ public class SearchPage extends AbstractPage {
     }
 
     public void getSelectColorBtn() {
-        if ("Color".equals(getColorBtn().getText())) {
+        if ("Color".equals(getColorBtn().getElement().getText())) {
             selectColorBtn.click();
             colorBtn.click();
         } else {
@@ -80,7 +79,7 @@ public class SearchPage extends AbstractPage {
     }
 
     public void getSelectStorageBtn() {
-        if ("Storage".equals(getStorageBtn().getText())) {
+        if ("Storage".equals(getStorageBtn().getElement().getText())) {
             selectStorageBtn.click();
             storageBtn.click();
         } else {

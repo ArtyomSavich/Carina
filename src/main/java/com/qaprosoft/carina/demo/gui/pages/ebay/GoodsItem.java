@@ -31,6 +31,7 @@ public class GoodsItem extends AbstractUIObject {
 
     public void getTitleLink() {
         this.titleLink.click();
+        pause(5);
     }
 
     public void cartBtn() {

@@ -4,6 +4,7 @@ import com.qaprosoft.carina.core.foundation.utils.Configuration;
 import com.qaprosoft.carina.core.foundation.utils.R;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.qaprosoft.carina.demo.gui.components.FooterMenu;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -36,6 +37,9 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//li[@id = 'gh-eb-Geo']//div//a[@id='gh-eb-Geo-a-default']")
     private ExtendedWebElement changeLanguageRus;
 
+    @FindBy(xpath = "//div[@id='gh-top']")
+    private PageHeaderMenu headerMenu;
+
     public void signOutButton() {
         this.signOutButton.click();
     }
@@ -46,11 +50,14 @@ public class HomePage extends AbstractPage {
         super(driver);
         setPageAbsoluteURL(R.CONFIG.get(Configuration.Parameter.URL.getKey()));
     }
+    public PageHeaderMenu headerMenu() {
+        return headerMenu;
+    }
     public void changeLanguageButton() {
         this.changeLanguageButton.hover();
     }
     public void signInButton(){this.signInButton.click();}
-    public String getHelloText2() {
+    public String getText() {
         return helloText2.getText();
     }
     public String getHelloText() {

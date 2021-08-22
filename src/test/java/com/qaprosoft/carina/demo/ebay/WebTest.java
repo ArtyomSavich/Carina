@@ -22,58 +22,57 @@ public class WebTest implements IAbstractTest {
     @Test()
     public void testLogin() {
 
-        HomePage home = new HomePage(getDriver());
-        home.open();
-        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+        homePage.signInButton();
 
-        home.signInButton();
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.authorization();
-        Assert.assertEquals(home.getHelloText(), "Hi Artyom!", "User not authorised");
-
+        Assert.assertEquals(homePage.getHelloText(), "Hi Artyom!", "User not authorised");
+        getDriver().close();
     }
 
     @Test()
     public void testSignOut() {
 
-        HomePage home = new HomePage(getDriver());
-        home.open();
-        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
-        home.changeLanguageButton();
-        home.changeLanguageEn();
-        home.signInButton();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+        homePage.signInButton();
 
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.authorization();
-        Assert.assertEquals(home.getHelloText(), "Hi Artyom!", "User not authorised");
-        home.helloButton();
-        home.signOutButton();
-        Assert.assertEquals(home.getHelloText2(), "Hi Artyom (Sign in)", "User not authorised");
+        Assert.assertEquals(homePage.getHelloText(), "Hi Artyom!", "User not authorised");
 
+        homePage.helloButton();
+        homePage.signOutButton();
+        Assert.assertEquals(homePage.getText(), "Hi Artyom (Sign in)", "User not authorised");
+        getDriver().close();
 
     }
 
     @Test()
     public void testChangeLanguage() {
 
-        HomePage home = new HomePage(getDriver());
-        home.open();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
 
-        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
 
-        home.changeLanguageButton();
-        home.changeLanguageEn();
+        homePage.changeLanguageButton();
+        homePage.changeLanguageEn();
 
-        Assert.assertEquals(home.getHelloText2(), "Hi! Sign in or register", "User not change language");
+        Assert.assertEquals(homePage.getText(), "Hi! Sign in or register", "User not change language");
+        getDriver().close();
     }
 
     @Test()
     public void testSearchGoods() {
-        HomePage home = new HomePage(getDriver());
-        home.open();
-        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
-        home.changeLanguageButton();
-        home.changeLanguageEn();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+
         SearchPage searchPage = new SearchPage(getDriver());
         final String searchQ = "iphone";
         List<GoodsItem> goods = searchPage.searchGoods(searchQ);
@@ -81,16 +80,15 @@ public class WebTest implements IAbstractTest {
         for (GoodsItem ni : goods) {
             Assert.assertTrue(StringUtils.containsIgnoreCase(ni.readTitle(), searchQ), "Found invalid goods");
         }
-
+        getDriver().close();
     }
 
     @Test
     public void testSortMethod() {
-        HomePage home = new HomePage(getDriver());
-        home.open();
-        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
-        home.changeLanguageButton();
-        home.changeLanguageEn();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+
         SearchPage searchPage = new SearchPage(getDriver());
         final String searchQ = "iphone";
         List<GoodsItem> goods = searchPage.searchGoodsWithSort(searchQ);
@@ -103,19 +101,21 @@ public class WebTest implements IAbstractTest {
         }
         Collections.sort(priceList);
         Assert.assertEquals(priceListClone, priceList, "Sorted incorrectly!");
-
+        getDriver().close();
     }
 
     @Test
     public void testAddToCart() {
-        HomePage home = new HomePage(getDriver());
-        home.open();
-        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+        homePage.signInButton();
 
-        home.signInButton();
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.authorization();
-        Assert.assertEquals(home.getHelloText(), "Hi Artyom!", "User not authorised");
+        Assert.assertEquals(homePage.getHelloText(), "Hi Artyom!", "User not authorised");
+
+
 
         SearchPage searchPage = new SearchPage(getDriver());
         final String searchQ = "iphone";
@@ -127,25 +127,25 @@ public class WebTest implements IAbstractTest {
         int prev1 = cartPage.getTextCart();
         GoodsItem item = searchPage.getGoods().get(randomNum);
         item.getTitleLink();
-        pause(5);
-        //  searchPage.getSelectColorBtn();
-        //  searchPage.getSelectStorageBtn();
         GoodsItem goodsItem = new GoodsItem(getDriver());
         goodsItem.cartBtn();
         int prev2 = cartPage.getTextCart();
         Assert.assertTrue(prev2 > prev1, "The item has not been added to the cart");
+        getDriver().close();
     }
 
     @Test
     public void testDealsPage() {
-        HomePage home = new HomePage(getDriver());
-        home.open();
-        Assert.assertTrue(home.isPageOpened(), "Home page is not opened!");
-        home.changeLanguageButton();
-        home.changeLanguageEn();
-        DealsPage dealsPage = home.openDailyDealsPage();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+        homePage.changeLanguageButton();
+        homePage.changeLanguageEn();
+        DealsPage dealsPage = homePage.openDailyDealsPage();
         Assert.assertTrue(dealsPage.isPageOpened(), "Home page is not opened!");
+        getDriver().close();
     }
+
     @Test
     public void testDeleteFromCart() {
 
@@ -168,9 +168,6 @@ public class WebTest implements IAbstractTest {
         int prev1 = cartPage.getTextCart();
         GoodsItem item = searchPage.getGoods().get(randomNum);
         item.getTitleLink();
-        pause(5);
-        //  searchPage.getSelectColorBtn();
-        //  searchPage.getSelectStorageBtn();
         GoodsItem goodsItem = new GoodsItem(getDriver());
         goodsItem.cartBtn();
         int prev2 = cartPage.getTextCart();
@@ -179,6 +176,7 @@ public class WebTest implements IAbstractTest {
         pause(3);
         int prev3 = cartPage.getTextCart();
         Assert.assertTrue(prev3 < prev2, "The item has not been added to the cart");
+        getDriver().close();
     }
 
     @Test
@@ -193,6 +191,9 @@ public class WebTest implements IAbstractTest {
         loginPage.authorization();
         Assert.assertEquals(home.getHelloText(), "Hi Artyom!", "User not authorised");
 
+
+
+
         SearchPage searchPage = new SearchPage(getDriver());
         final String searchQ = "iphone";
         List<GoodsItem> goods = searchPage.searchGoodsWithSort(searchQ);
@@ -201,14 +202,36 @@ public class WebTest implements IAbstractTest {
         int randomNum = (int) (Math.random() * goods.size());
         GoodsItem item = searchPage.getGoods().get(randomNum);
         item.getTitleLink();
-        pause(5);
         GoodsItem goodsItem = new GoodsItem(getDriver());
         goodsItem.addWatchListBtn();
-               pause(3);
+        pause(3);
         PageHeaderMenu pageHeaderMenu = new PageHeaderMenu(getDriver());
         WatchListPage watchListPage = pageHeaderMenu.openWatchListLinkPage();
         List<GoodsItem> goodsListFromWatchList = watchListPage.getGoodsFromWatchList();
         Assert.assertFalse(CollectionUtils.isEmpty(goodsListFromWatchList), "The item has not been added to the cart");
+        getDriver().close();
     }
 
+    @Test
+    public void testMessagesSearch() {
+
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+
+        homePage.signInButton();
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.authorization();
+        Assert.assertEquals(homePage.getHelloText(), "Hi Artyom!", "User not authorised");
+
+        SummaryPage summaryPage = homePage.headerMenu().openMessageLinkPage();
+        List<MessageItems> message = summaryPage.findMessage();
+        Assert.assertFalse(CollectionUtils.isEmpty(message), "Message Box is empty");
+        for (MessageItems m : message) {
+            System.out.println(m.readTitleOfMessage());
+        }
+        getDriver().close();
+
+    }
 }
+
