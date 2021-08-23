@@ -62,7 +62,9 @@ public class HomePage extends AbstractPage {
         this.changeLanguageRus.click();
     }
 
-    public void signInButton(){this.signInButton.click();}
+    public void signInButton(){this.signInButton.click();
+    pause(3);}
+
     public String getText() {
         return helloText2.getText();
     }

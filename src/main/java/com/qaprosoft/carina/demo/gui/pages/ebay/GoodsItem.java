@@ -36,6 +36,7 @@ public class GoodsItem extends AbstractUIObject {
 
     public void cartBtn() {
         this.cartBtn.click();
+        pause(3);
     }
 
     public String readTitle() {

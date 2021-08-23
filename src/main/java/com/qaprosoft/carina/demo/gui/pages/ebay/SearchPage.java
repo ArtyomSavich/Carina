@@ -23,7 +23,7 @@ public class SearchPage extends AbstractPage {
     private ExtendedWebElement priceFilterButton;
     @FindBy(xpath = "//button[@class='fake-menu-button__button expand-btn expand-btn--small']//*[contains(text(),'Delivery Options')]")
     private ExtendedWebElement deliveryButton;
-    @FindBy(xpath = "//*[@class='fake-menu-button srp-controls__control srp-controls__control--flyout menu-1']//span//li[2]")
+    @FindBy(xpath = "//*[@class='fake-menu-button srp-controls__control srp-controls__control--flyout menu-1']//span//li//a")
     private ExtendedWebElement freeDeliveryButton;
     @FindBy(xpath = "//*[@id='msku-sel-1']")
     private ExtendedWebElement colorBtn;
@@ -49,6 +49,7 @@ public class SearchPage extends AbstractPage {
     public List<GoodsItem> searchGoods(String q) {
         searchGoodsField.type(q);
         searchButton.click();
+        pause(3);
         return goods;
     }
 
@@ -62,8 +63,8 @@ public class SearchPage extends AbstractPage {
         searchButton.click();
         filterButton.click();
         priceFilterButton.click();
-        deliveryButton.click();
-        freeDeliveryButton.click();
+       // deliveryButton.click();
+       // freeDeliveryButton.click();
         pause(3);
         return goods;
     }

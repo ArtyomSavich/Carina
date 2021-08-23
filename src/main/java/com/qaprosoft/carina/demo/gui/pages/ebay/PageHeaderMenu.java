@@ -27,12 +27,16 @@ public class PageHeaderMenu extends AbstractUIObject {
     }
 
     public WatchListPage openWatchListLinkPage() {
+        getDriver().navigate().refresh();
+        pause(3);
         watchListLink.click();
+        pause(2);
         return new WatchListPage(driver);
     }
 
     public SummaryPage openMessageLinkPage() {
         myEbayLink.click();
+        pause(1);
         messageLink.click();
         pause(3);
         return new SummaryPage(driver);
