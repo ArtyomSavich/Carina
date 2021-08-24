@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestWebChangeLanguage implements IAbstractTest {
+
     @Test()
     public void testChangeLanguage() {
 

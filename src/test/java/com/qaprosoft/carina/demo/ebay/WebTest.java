@@ -4,10 +4,13 @@ import com.qaprosoft.carina.demo.gui.pages.ebay.*;
 import org.apache.commons.collections.CollectionUtils;
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 
+import java.lang.invoke.MethodHandles;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,10 +21,21 @@ import java.util.List;
  * @author qpsdemo
  */
 public class WebTest implements IAbstractTest {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+
+    @BeforeSuite
+    public void beforeSuite() {
+        LOGGER.info("Web Test Before Suite");
+    }
+
+    @BeforeTest
+    public void beforeTest() {
+        LOGGER.info("Web Test Before Test");
+    }
 
     @BeforeClass
     public void testLogin() {
-
+        LOGGER.info("Web Test Before Class");
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
@@ -32,32 +46,11 @@ public class WebTest implements IAbstractTest {
         Assert.assertEquals(homePage.getHelloText(), "Hi Artyom!", "User not authorised");
     }
 
-    @AfterClass
-    public void testSignOut() {
-
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
-  /*
-        homePage.signInButton();
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.authorization();
-        Assert.assertEquals(homePage.getHelloText(), "Hi Artyom!", "User not authorised");
-
-        homePage.helloButton();
-        homePage.signOutButton();*/
-        String firstText = "Здравствуйте! Войдите или зарегистрируйтесь";
-        String secondText = "Hi Artyom (Sign in)";
-        String a = null;
-        if (firstText.equals(homePage.getText())){
-           a = firstText;
-        } else if(secondText.equals(homePage.getText())){
-         a = secondText;
-        }
-
-        Assert.assertEquals(homePage.getText(), a,"User not authorised");
-
+    @BeforeMethod
+    public void beforeMethod() {
+        LOGGER.info("Web Test Before Method");
     }
+
 
     @Test
     public void testAddToCart() {
@@ -82,6 +75,7 @@ public class WebTest implements IAbstractTest {
         Assert.assertTrue(prev2 > prev1, "The item has not been added to the cart");
 
     }
+
     @Test
     public void testDeleteFromCart() {
 
@@ -109,6 +103,7 @@ public class WebTest implements IAbstractTest {
         Assert.assertTrue(prev3 < prev2, "The item has not been added to the cart");
 
     }
+
     @Test
     public void testMessagesSearch() {
 
@@ -157,6 +152,7 @@ public class WebTest implements IAbstractTest {
         Assert.assertFalse(CollectionUtils.isEmpty(goodsListFromWatchList), "The item has not been added to watchList");
 
     }
+
     @Test
     public void testSortMethod() {
         HomePage homePage = new HomePage(getDriver());
@@ -192,6 +188,49 @@ public class WebTest implements IAbstractTest {
             Assert.assertTrue(StringUtils.containsIgnoreCase(ni.readTitle(), searchQ), "Found invalid goods");
         }
     }
+
+    @AfterMethod
+    public void afterMethod() {
+        LOGGER.info("Web Test After Method");
+    }
+
+    @AfterClass
+    public void testSignOut() {
+        LOGGER.info("Web Test After Class");
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+  /*
+        homePage.signInButton();
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.authorization();
+        Assert.assertEquals(homePage.getHelloText(), "Hi Artyom!", "User not authorised");
+
+        homePage.helloButton();
+        homePage.signOutButton();*/
+        String firstText = "Здравствуйте! Войдите или зарегистрируйтесь";
+        String secondText = "Hi Artyom (Sign in)";
+        String a = null;
+        if (firstText.equals(homePage.getText())) {
+            a = firstText;
+        } else if (secondText.equals(homePage.getText())) {
+            a = secondText;
+        }
+
+        Assert.assertEquals(homePage.getText(), a, "User not authorised");
+
+    }
+
+    @AfterTest
+    public void afterTest() {
+        LOGGER.info("Web Test After Test");
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        LOGGER.info("Web Test After Suite");
+    }
+
 
 }
 
