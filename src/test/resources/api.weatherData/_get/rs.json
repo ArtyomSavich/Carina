@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": "skip",
+    "lat": "skip"
+  },
+  "weather": [
+    {
+      "id": "regex:[\\d]",
+      "main": "type:String",
+      "description": "type:String",
+      "icon": "skip"
+    }
+  ],
+  "base": "type:String",
+  "main": {
+    "temp": "regex:[\\d]",
+    "feels_like": "skip",
+    "temp_min": "skip",
+    "temp_max": "skip",
+    "pressure": "skip",
+    "humidity": "skip",
+    "sea_level": "skip",
+    "grnd_level": "skip"
+  },
+  "visibility": "skip",
+  "wind": {
+    "speed": "skip",
+    "deg": "skip",
+    "gust": "skip"
+  },
+  "clouds": {
+    "all": "skip"
+  },
+  "dt": "regex:[\\d]",
+  "sys": {
+    "country": "type:String",
+    "sunrise": "regex:[\\d]",
+    "sunset": "regex:[\\d]"
+  },
+  "timezone": "skip",
+  "id": "regex:[\\d]",
+  "name": "type:String",
+  "cod": 200
+}

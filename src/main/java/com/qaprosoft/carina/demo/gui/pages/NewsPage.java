@@ -37,7 +37,7 @@ public class NewsPage extends AbstractPage {
     
     public NewsPage(WebDriver driver) {
         super(driver);
-
+        setPageURL("/news.php3");
     }
     
     public List<NewsItem> searchNews(String q) {
