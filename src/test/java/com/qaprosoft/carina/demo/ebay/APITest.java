@@ -21,6 +21,7 @@ public class APITest implements IAbstractTest {
     public void testGetDataByNameCity() {
         GetDataWeatherMethod getDataWeatherMethod = new GetDataWeatherMethod();
         getDataWeatherMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+     //   getDataWeatherMethod.addProperty();
         getDataWeatherMethod.callAPI();
         getDataWeatherMethod.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getDataWeatherMethod.validateResponseAgainstSchema("api.weatherData/_get/rs.schema");
