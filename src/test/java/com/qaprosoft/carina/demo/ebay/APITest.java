@@ -7,6 +7,7 @@ import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.qaprosoft.carina.demo.api.GetUserMethods;
 import com.qaprosoft.carina.demo.api.PostUserMethod;
 import com.qaprosoft.carina.demo.api.dataWeather.GetDataWeatherMethod;
+import com.qaprosoft.carina.demo.api.dataWeather.GetDataWeatherMethodSecond;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,11 +20,11 @@ public class APITest implements IAbstractTest {
 
     @Test()
     public void testGetDataByNameCity() {
-        GetDataWeatherMethod getDataWeatherMethod = new GetDataWeatherMethod();
-        getDataWeatherMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+        GetDataWeatherMethodSecond getDataWeatherMethodSecond = new GetDataWeatherMethodSecond("625144");
+        getDataWeatherMethodSecond.expectResponseStatus(HttpResponseStatusType.OK_200);
      //   getDataWeatherMethod.addProperty();
-        getDataWeatherMethod.callAPI();
-        getDataWeatherMethod.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
-        getDataWeatherMethod.validateResponseAgainstSchema("api.weatherData/_get/rs.schema");
+        getDataWeatherMethodSecond.callAPI();
+        getDataWeatherMethodSecond.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getDataWeatherMethodSecond.validateResponseAgainstSchema("api/weatherData/_get/rs.schema");
     }
 }

@@ -6,10 +6,10 @@
       "type": "object",
       "properties": {
         "lon": {
-          "type": "string"
+          "type": "number"
         },
         "lat": {
-          "type": "string"
+          "type": "number"
         }
       },
       "required": [
@@ -24,7 +24,7 @@
           "type": "object",
           "properties": {
             "id": {
-              "type": "string"
+              "type": "integer"
             },
             "main": {
               "type": "string"
@@ -52,28 +52,28 @@
       "type": "object",
       "properties": {
         "temp": {
-          "type": "string"
+          "type": "number"
         },
         "feels_like": {
-          "type": "string"
+          "type": "number"
         },
         "temp_min": {
-          "type": "string"
+          "type": "number"
         },
         "temp_max": {
-          "type": "string"
+          "type": "number"
         },
         "pressure": {
-          "type": "string"
+          "type": "integer"
         },
         "humidity": {
-          "type": "string"
+          "type": "integer"
         },
         "sea_level": {
-          "type": "string"
+          "type": "integer"
         },
         "grnd_level": {
-          "type": "string"
+          "type": "integer"
         }
       },
       "required": [
@@ -88,19 +88,19 @@
       ]
     },
     "visibility": {
-      "type": "string"
+      "type": "integer"
     },
     "wind": {
       "type": "object",
       "properties": {
         "speed": {
-          "type": "string"
+          "type": "number"
         },
         "deg": {
-          "type": "string"
+          "type": "integer"
         },
         "gust": {
-          "type": "string"
+          "type": "number"
         }
       },
       "required": [
@@ -113,7 +113,7 @@
       "type": "object",
       "properties": {
         "all": {
-          "type": "string"
+          "type": "integer"
         }
       },
       "required": [
@@ -121,32 +121,40 @@
       ]
     },
     "dt": {
-      "type": "string"
+      "type": "integer"
     },
     "sys": {
       "type": "object",
       "properties": {
+        "type": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
         "country": {
           "type": "string"
         },
         "sunrise": {
-          "type": "string"
+          "type": "integer"
         },
         "sunset": {
-          "type": "string"
+          "type": "integer"
         }
       },
       "required": [
+        "type",
+        "id",
         "country",
         "sunrise",
         "sunset"
       ]
     },
     "timezone": {
-      "type": "string"
+      "type": "integer"
     },
     "id": {
-      "type": "string"
+      "type": "integer"
     },
     "name": {
       "type": "string"
