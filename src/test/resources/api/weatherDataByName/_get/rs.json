@@ -1,0 +1,52 @@
+{
+  "coord": {
+    "lon": "regex:[\\d]",
+    "lat": "regex:[\\d]"
+  },
+  "weather": [
+    {
+      "id": "regex:[\\d]",
+      "main": "type:String",
+      "description": "type:String",
+      "icon": "skip"
+    },
+    {
+      "id": "regex:[\\d]",
+      "main": "type:String",
+      "description": "skip",
+      "icon": "skip"
+    }
+  ],
+  "base": "type:String",
+  "main": {
+    "temp": "regex:[\\d]",
+    "feels_like": "regex:[\\d]",
+    "temp_min": "regex:[\\d]",
+    "temp_max": "regex:[\\d]",
+    "pressure": "regex:[\\d]",
+    "humidity": "regex:[\\d]"
+  },
+  "visibility": "regex:[\\d]",
+  "wind": {
+    "speed": "regex:[\\d]",
+    "deg": "regex:[\\d]"
+  },
+  "rain": {
+    "1h": "regex:[\\d]"
+  },
+  "clouds": {
+    "all": "regex:[\\d]"
+  },
+  "dt": "regex:[\\d]",
+  "sys": {
+    "type": "regex:[\\d]",
+    "id": "regex:[\\d]",
+    "country": "BY",
+    "sunrise": "regex:[\\d]",
+    "sunset": "regex:[\\d]"
+  },
+  "timezone": "regex:[\\d]",
+  "id": 629634,
+  "name": "Brest",
+  "cod": "regex:[\\d]"
+}

@@ -1,0 +1,809 @@
+{
+  "cod": "regex:[\\d]",
+  "calctime": "regex:[\\d]",
+  "cnt": "regex:[\\d]",
+  "list": [
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "type:String",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Catanzaro",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "San Giovanni in Fiore",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Campo Superiore",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Lamezia Terme",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Vibo Valentia",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Taurianova",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Cosenza",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Palmi",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "skip"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Acri",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "skip"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Corigliano Calabro",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "skip"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Paola",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Reggio Calabria",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "skip"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Messina",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "skip"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Tricase",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "type:String",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "skip"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Barcellona Pozzo di Gotto",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "skip",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "skip"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Catania",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "skip"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Corfu",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "skip"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Augusta",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "skip"
+        }
+      ]
+    },
+    {
+      "id": "regex:[\\d]",
+      "dt": "regex:[\\d]",
+      "name": "Syracuse",
+      "coord": {
+        "Lon": "regex:[\\d]",
+        "Lat": "regex:[\\d]"
+      },
+      "main": {
+        "temp": "regex:[\\d]",
+        "feels_like": "regex:[\\d]",
+        "temp_min": "regex:[\\d]",
+        "temp_max": "regex:[\\d]",
+        "pressure": "regex:[\\d]",
+        "sea_level": "regex:[\\d]",
+        "grnd_level": "regex:[\\d]",
+        "humidity": "regex:[\\d]"
+      },
+      "visibility": "regex:[\\d]",
+      "wind": {
+        "speed": "regex:[\\d]",
+        "deg": "regex:[\\d]"
+      },
+      "rain": "skip",
+      "snow": "skip",
+      "clouds": {
+        "today": "regex:[\\d]"
+      },
+      "weather": [
+        {
+          "id": "regex:[\\d]",
+          "main": "type:String",
+          "description": "type:String",
+          "icon": "skip"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "coord": {
+    "lon": "regex:[\\d]",
+    "lat": "regex:[\\d]"
+  },
+  "weather": [
+    {
+      "id": "regex:[\\d]",
+      "main": "type:String",
+      "description": "type:String",
+      "icon": "skip"
+    }
+  ],
+  "base": "type:String",
+  "main": {
+    "temp": "regex:[\\d]",
+    "feels_like": "regex:[\\d]",
+    "temp_min": "regex:[\\d]",
+    "temp_max": "regex:[\\d]",
+    "pressure": "regex:[\\d]",
+    "humidity": "regex:[\\d]",
+    "sea_level": "regex:[\\d]",
+    "grnd_level": "regex:[\\d]"
+  },
+  "visibility": "regex:[\\d]",
+  "wind": {
+    "speed": "regex:[\\d]",
+    "deg": "regex:[\\d]",
+    "gust": "regex:[\\d]"
+  },
+  "clouds": {
+    "all": "regex:[\\d]"
+  },
+  "dt": "regex:[\\d]",
+  "sys": {
+    "type": "regex:[\\d]",
+    "id": "regex:[\\d]",
+    "country": "BY",
+    "sunrise": "regex:[\\d]",
+    "sunset": "regex:[\\d]"
+  },
+  "timezone": "regex:[\\d]",
+  "id": "regex:[\\d]",
+  "name": "Ясень",
+  "cod": "regex:[\\d]"
+}
