@@ -5,9 +5,9 @@ import com.qaprosoft.carina.core.foundation.utils.Configuration;
 
 public class GetDataWeatherByGeogCoord extends AbstractApiMethodV2 {
     public GetDataWeatherByGeogCoord() {
-        super(null, "api/dataWeatherByGeogCoord/_get/rs.json");
+        super(null, "api/dataWeatherByGeogCoord/_get/rs.json","api/dataWeatherByGeogCoord/_get/dataWeatherByGeogCoord.properties");
         replaceUrlPlaceholder("base_url", Configuration.getEnvArg("api_url"));
-        addParameter("appid","3a7d92cc6e42f6db9e249daf72f0b2c7");
+        addParameter("appid",ApiKey.getKey());
     }
 
 }

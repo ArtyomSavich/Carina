@@ -22,7 +22,10 @@ public class APITest implements IAbstractTest {
         getDataWeatherMethod.addParameterIfNotNull("id", "625144");
         getDataWeatherMethod.callAPI();
         getDataWeatherMethod.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getDataWeatherMethod.getProperties().replace("nameCity","skip","Minsk");
+        getDataWeatherMethod.getProperties().replace("nameCountry","skip","BY");
         getDataWeatherMethod.validateResponseAgainstSchema("api/weatherData/_get/rs.schema");
+
     }
     @Test()
     public void testGetByNameCity(){
@@ -34,6 +37,7 @@ public class APITest implements IAbstractTest {
         getDataWeatherByNameCity.validateResponseAgainstSchema("api/weatherDataByName/_get/rs.schema");
     }
 
+
     @Test()
     public void testGetByGeogCoord(){
         GetDataWeatherByGeogCoord getDataWeatherByGeogCoord = new GetDataWeatherByGeogCoord();
@@ -42,6 +46,8 @@ public class APITest implements IAbstractTest {
         getDataWeatherByGeogCoord.addParameterIfNotNull("lon", "27,33");
         getDataWeatherByGeogCoord.callAPI();
         getDataWeatherByGeogCoord.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getDataWeatherByGeogCoord.getProperties().replace("nameCityByGC","skip","Yasen’");
+        getDataWeatherByGeogCoord.getProperties().replace("nameCountry","skip","BY");
         getDataWeatherByGeogCoord.validateResponseAgainstSchema("api/dataWeatherByGeogCoord/_get/rs.schema");
     }
     @Test()

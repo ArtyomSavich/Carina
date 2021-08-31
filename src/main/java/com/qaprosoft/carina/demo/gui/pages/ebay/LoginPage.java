@@ -1,10 +1,14 @@
 package com.qaprosoft.carina.demo.gui.pages.ebay;
 
+import com.qaprosoft.carina.core.foundation.commons.SpecialKeywords;
+import com.qaprosoft.carina.core.foundation.crypto.CryptoTool;
 import com.qaprosoft.carina.core.foundation.utils.R;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.regex.Pattern;
 
 public class LoginPage extends AbstractPage {
 
@@ -81,9 +85,13 @@ public class LoginPage extends AbstractPage {
     }
 
     public void authorization (){
-       emailOrUserField().type(R.TESTDATA.get("login"));
+       CryptoTool cryptoTool = new CryptoTool("/Users/asavich/Documents/crypto.key");
+       Pattern CRYPTO_PATTERN = Pattern.compile(SpecialKeywords.CRYPT);
+       String decryptedValueLogin = cryptoTool.decryptByPattern(R.TESTDATA.get("login"), CRYPTO_PATTERN).replaceAll("\"", "");
+       String decryptedValuePassword = cryptoTool.decryptByPattern(R.TESTDATA.get("password"), CRYPTO_PATTERN).replaceAll("\"", "");;
+       emailOrUserField().type(decryptedValueLogin);
        continueButton().click();
-       passField().type(R.TESTDATA.get("password"));
+       passField().type(decryptedValuePassword);
        signButton().click();
     }
 }

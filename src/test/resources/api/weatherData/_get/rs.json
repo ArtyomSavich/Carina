@@ -35,12 +35,12 @@
   "sys": {
     "type": "regex:[\\d]",
     "id": "regex:[\\d]",
-    "country": "type:String",
+    "country": "${nameCountry}",
     "sunrise": "skip",
     "sunset": "skip"
   },
   "timezone": "regex:[\\d]",
   "id": "regex:[\\d]",
-  "name": "type:String",
-  "cod": 200
+  "name":"${nameCity}",
+  "cod": "regex:[\\d]"
 }

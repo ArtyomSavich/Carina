@@ -41,12 +41,12 @@
   "sys": {
     "type": "regex:[\\d]",
     "id": "regex:[\\d]",
-    "country": "BY",
+    "country": "type:String",
     "sunrise": "regex:[\\d]",
     "sunset": "regex:[\\d]"
   },
   "timezone": "regex:[\\d]",
-  "id": 629634,
-  "name": "Brest",
+  "id": "regex:[\\d]",
+  "name": "type:String",
   "cod": "regex:[\\d]"
 }

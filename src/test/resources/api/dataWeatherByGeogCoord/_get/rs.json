@@ -35,12 +35,12 @@
   "sys": {
     "type": "skip",
     "id": "regex:[\\d]",
-    "country": "BY",
+    "country": "${countryName}",
     "sunrise": "regex:[\\d]",
     "sunset": "regex:[\\d]"
   },
   "timezone": "regex:[\\d]",
   "id": "regex:[\\d]",
-  "name": "Yasen’",
+  "name": "${nameCityByGC}",
   "cod": "regex:[\\d]"
 }
