@@ -14,9 +14,9 @@
 	<parameter name="jenkinsPipelineEnvironments" value="DEMO"/>	
 	<parameter name="jenkinsJobExecutionMode" value="continue"/>
 
-	<test name="User API tests">
+	<test name="Data weather API tests">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.APISampleTest" />
+			<class name="com.qaprosoft.carina.demo.ebay.APITest" />
 		</classes>
 	</test>
 

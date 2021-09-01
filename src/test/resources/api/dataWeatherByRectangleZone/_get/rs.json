@@ -36,7 +36,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "03d"
+          "icon": "skip"
         }
       ]
     },
@@ -73,7 +73,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -110,7 +110,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -147,7 +147,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -182,7 +182,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -219,7 +219,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -256,7 +256,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -293,7 +293,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -330,7 +330,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -367,7 +367,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -404,7 +404,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -441,7 +441,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -476,7 +476,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -511,7 +511,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
@@ -620,7 +620,7 @@
           "id": "regex:[\\d]",
           "main": "type:String",
           "description": "type:String",
-          "icon": "01d"
+          "icon": "skip"
         }
       ]
     },
