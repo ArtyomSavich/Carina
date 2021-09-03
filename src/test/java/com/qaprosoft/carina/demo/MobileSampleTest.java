@@ -16,6 +16,7 @@
 package com.qaprosoft.carina.demo;
 
 import com.zebrunner.agent.core.annotation.TestLabel;
+import io.appium.java_client.pagefactory.AndroidBy;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
